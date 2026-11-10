@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: 'Inter', sans-serif;
+    color: #1E1E24;
+    background-color: #F8F9FA;
+}
+
+*:focus-visible {
+    outline: 3px solid #124E66;
+    outline-offset: 2px;
+}
+
+button,
+[role="button"],
+a,
+input[type="checkbox"],
+input[type="radio"] {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #BED7E2 transparent;
+}
+
+/* Alto Contraste */
+.admin-accessible.is-high-contrast {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+.admin-accessible.is-high-contrast aside,
+.admin-accessible.is-high-contrast header,
+.admin-accessible.is-high-contrast div,
+.admin-accessible.is-high-contrast article,
+.admin-accessible.is-high-contrast section,
+.admin-accessible.is-high-contrast table,
+.admin-accessible.is-high-contrast th,
+.admin-accessible.is-high-contrast td,
+.admin-accessible.is-high-contrast tr {
+    background-color: #121212 !important;
+    color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+}
+
+.admin-accessible.is-high-contrast button {
+    border: 2px solid #FFFFFF !important;
+    color: #FFFFFF !important;
+}
+
+.admin-accessible.is-high-contrast p,
+.admin-accessible.is-high-contrast span,
+.admin-accessible.is-high-contrast h1,
+.admin-accessible.is-high-contrast h2,
+.admin-accessible.is-high-contrast h3,
+.admin-accessible.is-high-contrast h4,
+.admin-accessible.is-high-contrast label,
+.admin-accessible.is-high-contrast li {
+    color: #FFFFFF !important;
+}
+
+.admin-accessible.is-high-contrast svg {
+    stroke: #FFFFFF !important;
+}
+
+.admin-accessible.is-high-contrast .progress-fill {
+    background-color: #FFFFFF !important;
+    background-image: none !important; 
+}
+
+.admin-accessible.is-high-contrast input,
+.admin-accessible.is-high-contrast select,
+.admin-accessible.is-high-contrast textarea {
+    background-color: #121212 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+/* Aumentar Fonte (escala geral) */
+.admin-accessible.is-large-font h1 { font-size: 2.25rem !important; }
+.admin-accessible.is-large-font h2 { font-size: 1.75rem !important; }
+.admin-accessible.is-large-font h3 { font-size: 1.5rem !important; }
+.admin-accessible.is-large-font h4 { font-size: 1.25rem !important; }
+.admin-accessible.is-large-font p,
+.admin-accessible.is-large-font span,
+.admin-accessible.is-large-font td,
+.admin-accessible.is-large-font th,
+.admin-accessible.is-large-font button,
+.admin-accessible.is-large-font input,
+.admin-accessible.is-large-font label,
+.admin-accessible.is-large-font li {
+    font-size: 1.125rem !important;
+}
