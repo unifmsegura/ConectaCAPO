@@ -12,35 +12,6 @@ Stack: React 19 · TypeScript · Vite · Tailwind CSS 3 · Supabase (supabase-js
 - Um projeto Supabase com o schema aplicado (veja `conecta-capo.sql`)
 - A Edge Function `create-charge` implantada no projeto Supabase
 
-## Configuração
-
-1. Instale as dependências:
-
-   ```
-   npm install
-   ```
-
-2. Crie o arquivo `.env` na raiz (copie de `.env.example`) e preencha com os
-   valores do seu projeto Supabase (Settings → API):
-
-   ```
-   VITE_SUPABASE_URL=https://seu-projeto.supabase.co
-   VITE_SUPABASE_ANON_KEY=sua-anon-key
-   ```
-
-   > Usar apenas a URL e a anon key públicas. Nunca coloque a
-   > `service_role` ou segredos do provedor de pagamento no front-end, eles
-   > ficam na Edge Function `create-charge` (server-side).
-
-3. Aplique o banco: rode `conecta-capo.sql` inteiro no SQL Editor do Supabase
-   (em projeto novo/limpo). Ele cria tabelas, RLS, views, triggers, o bucket
-   público `mural` e as campanhas iniciais.
-
-4. Crie os usuários da equipe em Authentication -> Users e, no SQL Editor,
-   libere cada um na tabela `admins` (as instruções estão comentadas no final
-   do `conecta-capo.sql`). Papéis:
-   - `admin` — acesso total ao painel;
-   - `voluntaria` — acesso apenas às seções Mural e Configurações.
 
 ## Como rodar
 
